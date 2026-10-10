@@ -1,143 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Racing Pedal</title>
-  <meta name="description" content="Racing Pedal — CAD · Product design · Prototyping" />
-  <link rel="preload" as="image" href="../assets/Pedal-3D-Print.jpg" />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="light dark" />
-  <style>
-    :root{
-      --bg: #f7f8fb; --bg-soft: #f0f3f9; --text: #0d1117; --muted: #5a6577;
-      --card: #ffffff; --accent: #2f65f5; --accent-2: #15b86a; --ring: rgba(47,101,245,0.25);
-      --shadow: 0 8px 24px rgba(12, 28, 58, 0.12); --radius: 18px; --container: 900px;
-    }
-    @media (prefers-color-scheme: dark){
-      :root{
-        --bg: #0b0e13; --bg-soft: #121720; --text: #e8eaf0; --muted: #b7c0d1;
-        --card: #0f141d; --accent: #7aa2ff; --accent-2: #9ef0c0; --ring: rgba(122,162,255,0.45);
-        --shadow: 0 10px 30px rgba(0,0,0,0.35);
-      }
-    }
-    :root[data-theme="light"]{
-      --bg: #f7f8fb; --bg-soft: #f0f3f9; --text: #0d1117; --muted: #5a6577;
-      --card: #ffffff; --accent: #2f65f5; --accent-2: #15b86a; --ring: rgba(47,101,245,0.25);
-      --shadow: 0 8px 24px rgba(12, 28, 58, 0.12);
-    }
-    :root[data-theme="dark"]{
-      --bg: #0b0e13; --bg-soft: #121720; --text: #e8eaf0; --muted: #b7c0d1;
-      --card: #0f141d; --accent: #7aa2ff; --accent-2: #9ef0c0; --ring: rgba(122,162,255,0.45);
-      --shadow: 0 10px 30px rgba(0,0,0,0.35);
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans;
-         color:var(--text); background:var(--bg)}
-    .container{width:min(100%, var(--container)); margin-inline:auto; padding:0 20px}
-
-    /* Header / top bar */
-    .site-header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(1.5) blur(10px);
-      background: color-mix(in oklab, var(--bg) 75%, transparent);
-      border-bottom:1px solid color-mix(in oklab, var(--text) 12%, transparent)}
-    .nav{display:flex; align-items:center; gap:18px; padding:14px 0}
-    .nav nav{display:flex; gap:28px}
-    @media (min-width: 900px){ .nav nav{gap:18px} }
-    .brand{font-weight:700; letter-spacing:.2px}
-    .brand a{color:inherit; text-decoration:none}
-    .nav a{color:inherit; text-decoration:none; opacity:.9}
-    .nav a:hover{opacity:1}
-    .spacer{flex:1}
-    .theme-btn, .back-btn{
-      border:1px solid color-mix(in oklab, var(--text) 18%, transparent); border-radius:999px;
-      padding:8px 12px; background:var(--card); color:inherit; box-shadow:var(--shadow); cursor:pointer;
-      text-decoration:none; display:inline-flex; align-items:center; gap:8px
-    }
-
-    /* Hero / page titles */
-    .hero{position:relative; isolation:isolate; overflow:hidden;
-      background: linear-gradient(135deg, color-mix(in oklab, var(--accent) 25%, var(--bg) 75%), var(--bg));
-      border-bottom:1px solid color-mix(in oklab, var(--text) 10%, transparent)}
-    .hero-inner{display:grid; grid-template-columns: 1fr; gap:16px; align-items:center;
-      padding: clamp(32px, 6vw, 72px) 0}
-    h1.title{font-size: clamp(28px, 4vw, 44px); line-height:1.12; margin:0}
-    .subtitle{margin:0; color:var(--muted)}
-
-    /* Minimal tags */
-    .tags{display:flex; gap:6px; flex-wrap:wrap; margin-top:10px}
-    .tag{
-      font-size:12px; line-height:1;
-      padding:6px 8px; border-radius:999px;
-      border:1px solid color-mix(in oklab, var(--text) 14%, transparent);
-      color: color-mix(in oklab, var(--text) 80%, transparent);
-      background: color-mix(in oklab, var(--bg) 88%, var(--bg-soft) 12%);
-    }
-
-    section{padding:32px 0}
-    .footer{padding:36px 0 64px; color:var(--muted);
-      border-top:1px solid color-mix(in oklab, var(--text) 10%, transparent)}
-
-
-    /* Carousel */
-    .carousel{position:relative}
-    .carousel figure{margin:0; border:1px solid color-mix(in oklab, var(--text) 12%, transparent);
-      background:var(--card); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow)}
-    .carousel img{width:100%; height:auto; display:block}
-    .carousel figcaption{padding:10px 14px; font-size:14px; color:var(--muted)}
-    .carousel .controls{display:flex; align-items:center; justify-content:space-between; gap:10px; margin:10px 2px 0}
-    .carousel button{
-      border:1px solid color-mix(in oklab, var(--text) 18%, transparent); border-radius:999px;
-      padding:8px 12px; background:var(--card); color:inherit; box-shadow:var(--shadow); cursor:pointer
-    }
-    .carousel .status{font-size:14px; color:var(--muted)}
-
-    /* Content */
-    .prose{max-width:72ch}
-    figure{margin:0; border:1px solid color-mix(in oklab, var(--text) 12%, transparent);
-      background:var(--card); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow)}
-    figure img{width:100%; height:auto; display:block}
-    figure figcaption{padding:10px 14px; font-size:14px; color:var(--muted)}
-
-    @media print{ .site-header, .theme-btn, .back-btn { display:none } }
-  </style>
-  <link rel="preload" as="image" href="../assets/linkedin.svg" />
-  <link rel="preload" as="image" href="../assets/instagram.svg" />
-  <link rel="preload" as="image" href="../assets/Pedal-3D-Print.jpg" />
-  <link rel="preload" as="image" href="../assets/Pedal-3D-Print-home-position.jpg" />
-  <link rel="preload" as="image" href="../assets/Pedal-CAD.jpg" />
-  <link rel="preload" as="image" href="../assets/Pedal-CAD%20II.jpg" />
-
+  <title>Racing Pedal — Ivan Kossko</title>
+  <meta name="description" content="A 3D-printed racing pedal designed in SolidWorks for a Suzuki Swift that fits using the car’s existing geometry." />
+  <link rel="canonical" href="https://kos-works.github.io/website/projects/pedal.html" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; object-src 'self'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0a0d12">
+  <meta name="msapplication-TileColor" content="#0a0d12">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ivan Kossko">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Racing Pedal — Ivan Kossko">
+  <meta property="og:description" content="A 3D-printed racing pedal designed in SolidWorks for a Suzuki Swift that fits using the car’s existing geometry.">
+  <meta property="og:url" content="https://kos-works.github.io/website/projects/pedal.html">
+  <meta property="og:image" content="https://kos-works.github.io/website/assets/social.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ivan Kossko: things I design, build and break. Engineer and maker portfolio.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Racing Pedal — Ivan Kossko">
+  <meta name="twitter:description" content="A 3D-printed racing pedal designed in SolidWorks for a Suzuki Swift that fits using the car’s existing geometry.">
+  <meta name="twitter:image" content="https://kos-works.github.io/website/assets/social.jpg">
+  <meta name="twitter:image:alt" content="Ivan Kossko: things I design, build and break. Engineer and maker portfolio.">
+  <script>
+    (function(){var r=document.documentElement;r.classList.add('js');var t='dark';
+    try{var s=localStorage.getItem('prefers-theme');if(s==='light'||s==='dark')t=s}catch(e){}
+    r.dataset.theme=t})();
+  </script>
+  <link rel="preload" href="../assets/fonts/InstrumentSerif-normal-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/Geist-normal-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/fonts.css" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preload" as="image" href="../assets/Pedal-CAD.webp" />
 </head>
 <body>
+  <a class="skip" href="#content">Skip to content</a>
   <header class="site-header">
-    <div class="container nav">
-      <div class="brand"><a href="../index.html#top" aria-label="Go to start">Ivan Kossko</a></div>
+    <div class="wrap nav">
+      <a class="brand" href="../index.html#top" aria-label="Ivan Kossko — go to start">Ivan Kossko</a>
       <nav aria-label="Primary">
         <a href="../index.html#projects">Projects</a>
         <a href="../index.html#contact">Contact</a>
       </nav>
-      <div class="spacer"></div>
-      <a class="back-btn" href="../index.html#projects" aria-label="Back to project list">← Back</a>
-      <button class="theme-btn" id="themeToggle" aria-pressed="false" aria-label="Toggle theme">Theme</button>
+      <div class="nav-tools">
+        <a class="back-btn" href="../index.html#projects" aria-label="Back to project list">← <span>Back</span></a>
+        <button class="theme-btn" id="themeToggle" type="button" aria-pressed="true" aria-label="Toggle theme">Theme</button>
+      </div>
     </div>
   </header>
 
   <main id="content">
-    <section class="hero">
-      <div class="container hero-inner">
-        <div>
-          <h1 class="title">Racing Pedal</h1>
-          <div class="tags" aria-label="Tags"><span class="tag">CAD</span><span class="tag">Product design</span><span class="tag">SolidWorks</span><span class="tag">3D printing</span><span class="tag">Prototyping</span></div>
+    <section class="p-hero">
+      <div class="wrap">
+        <p class="mono crumb fade-in" style="--d:.1s"><a href="../index.html#projects">Projects</a><span aria-hidden="true">/</span><span>05</span></p>
+        <h1 class="p-title"><span class="line"><span style="--d:.15s">Racing Pedal</span></span></h1>
+        <div class="p-meta fade-in" style="--d:.6s">
+          <span class="mono count">05 / 07</span>
+          <ul class="tags" aria-label="Tags"><li class="tag">CAD</li><li class="tag">Product design</li><li class="tag">SolidWorks</li><li class="tag">3D printing</li><li class="tag">Prototyping</li></ul>
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="container prose">
-        
+    <section class="p-media">
+      <div class="wrap reveal">
         <div class="carousel" id="pedalCarousel">
           <figure>
-            <img id="pedalSlide" src="../assets/Pedal-3D-Print.jpg" alt="3D printed prototype of a racing pedal" />
+            <img decoding="async" id="pedalSlide" src="../assets/Pedal-3D-Print.webp" alt="3D printed prototype of a racing pedal" />
             <figcaption id="pedalCaption">3D‑printed prototype</figcaption>
           </figure>
           <div class="controls">
@@ -146,51 +83,52 @@
             <button type="button" id="pedalNext" aria-label="Next image">Next →</button>
           </div>
         </div>
-        <h2>What I did</h2>
-        <ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap p-body">
+        <h2 class="reveal">What I did</h2>
+        <ol class="steps reveal">
           <li>Designed a racing pedal for a friend.</li>
           <li>Designed for a Suzuki Swift and installs without removing any original parts by utilising existing geometry.</li>
           <li>Used SolidWorks and 3D printing.</li>
           <li>Produced and tested a 3D printed version and verified function.</li>
           <li>Planned aluminium machining but the car was sold before completion.</li>
-        </ul>
+        </ol>
       </div>
     </section>
+
+    <section class="cta-section">
+      <div class="wrap"><a class="btn btn--primary" href="../index.html#contact" data-cta="get-in-touch">Get in touch</a></div>
+    </section>
+
+    <nav class="pager" aria-label="More projects">
+      <a href="robot.html" rel="prev"><span class="mono">← Previous</span><strong>Final Year University Project · 6 DoF Robot and Simulation</strong></a>
+      <a href="drone.html" rel="next"><span class="mono">Next →</span><strong>Custom FPV Drone</strong></a>
+    </nav>
   </main>
+
   <footer class="footer">
-    <div class="container">
+    <div class="wrap">
       <p>© <span id="year"></span> Ivan Kossko. All rights reserved.</p>
+      <nav class="footer-links" aria-label="Legal">
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+      </nav>
     </div>
   </footer>
+
+  <script src="../assets/site.js" defer></script>
   <script>
-    const btn = document.getElementById('themeToggle');
-    const root = document.documentElement;
-    const key = 'prefers-theme';
-    const saved = localStorage.getItem(key);
-    if (saved === 'light' || saved === 'dark') {
-      root.setAttribute('data-theme', saved);
-      if(btn) btn.setAttribute('aria-pressed', String(saved === 'dark'));
-    }
-    if(btn){
-      btn.addEventListener('click', () => {
-        const system = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        const current = root.getAttribute('data-theme') || system;
-        const next = current === 'light' ? 'dark' : 'light';
-        root.setAttribute('data-theme', next);
-        localStorage.setItem(key, next);
-        btn.setAttribute('aria-pressed', String(next === 'dark'));
-      });
-    }
-    const yearEl = document.getElementById('year'); if (yearEl) yearEl.textContent = new Date().getFullYear();
-  
-    // --- Pedal carousel ---
+  // --- Pedal carousel ---
     (function(){
       const slides = [
 
-        {src: "../assets/Pedal-CAD%20II.jpg",               alt: "CAD model alternate view",               cap: "CAD model (No Logo)"},
-        {src: "../assets/Pedal-CAD.jpg",                    alt: "CAD model of the pedal",                 cap: "CAD model (With Logo)"},
-        {src: "../assets/Pedal-3D-Print-home-position.jpg", alt: "Pedal in home position",                 cap: "Position one for regular driving"},
-        {src: "../assets/Pedal-3D-Print.jpg",               alt: "3D printed prototype of a racing pedal", cap: "Position two for racing"},
+        {src: "../assets/Pedal-CAD%20II.webp",               alt: "CAD model alternate view",               cap: "CAD model (No Logo)"},
+        {src: "../assets/Pedal-CAD.webp",                    alt: "CAD model of the pedal",                 cap: "CAD model (With Logo)"},
+        {src: "../assets/Pedal-3D-Print-home-position.webp", alt: "Pedal in home position",                 cap: "Position one for regular driving"},
+        {src: "../assets/Pedal-3D-Print.webp",               alt: "3D printed prototype of a racing pedal", cap: "Position two for racing"},
       ];
       const img = document.getElementById('pedalSlide');
       const cap = document.getElementById('pedalCaption');
@@ -218,8 +156,6 @@
       });
       render();
     })();
-
   </script>
-
 </body>
 </html>

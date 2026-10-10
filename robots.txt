@@ -1,0 +1,7 @@
+# Note: crawlers only read robots.txt at the root of a domain. On a GitHub Pages project site
+# (…github.io/website/) this file is not picked up automatically; submit sitemap.xml in
+# Google Search Console / Bing Webmaster Tools instead. It will work as-is on a custom domain.
+User-agent: *
+Allow: /
+
+Sitemap: https://kos-works.github.io/website/sitemap.xml

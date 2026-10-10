@@ -1,0 +1,8 @@
+# secrets / local env (none are used today; kept ignored in case that changes)
+.env
+.env.*
+!.env.example
+# OS / editor
+.DS_Store
+Thumbs.db
+*.bak
