@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ivan Kossko — Portfolio</title>
+  <title>Ivan Kossko | Portfolio</title>
   <meta name="description" content="Portfolio of Ivan Kossko, an engineer and maker: night vision, custom watches, a bioreactor PCB, a 6 DoF soft robot, a racing pedal, an FPV drone and 3D printer upgrades." />
   <link rel="canonical" href="https://kos-works.github.io/website/" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; object-src 'self'; base-uri 'self'; form-action 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="color-scheme" content="dark light" />
-  <meta name="theme-color" content="#0a0d12">
-  <meta name="msapplication-TileColor" content="#0a0d12">
+  <meta name="theme-color" content="#0e1013">
+  <meta name="msapplication-TileColor" content="#0e1013">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Ivan Kossko">
   <meta property="og:locale" content="en_GB">
-  <meta property="og:title" content="Ivan Kossko — Portfolio">
+  <meta property="og:title" content="Ivan Kossko | Portfolio">
   <meta property="og:description" content="Portfolio of Ivan Kossko, an engineer and maker: night vision, custom watches, a bioreactor PCB, a 6 DoF soft robot, a racing pedal, an FPV drone and 3D printer upgrades.">
   <meta property="og:url" content="https://kos-works.github.io/website/">
   <meta property="og:image" content="https://kos-works.github.io/website/assets/social.jpg">
@@ -22,16 +22,15 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Ivan Kossko: things I design, build and break. Engineer and maker portfolio.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ivan Kossko — Portfolio">
+  <meta name="twitter:title" content="Ivan Kossko | Portfolio">
   <meta name="twitter:description" content="Portfolio of Ivan Kossko, an engineer and maker: night vision, custom watches, a bioreactor PCB, a 6 DoF soft robot, a racing pedal, an FPV drone and 3D printer upgrades.">
   <meta name="twitter:image" content="https://kos-works.github.io/website/assets/social.jpg">
   <meta name="twitter:image:alt" content="Ivan Kossko: things I design, build and break. Engineer and maker portfolio.">
   <script>
-    (function(){var r=document.documentElement;r.classList.add('js');var t='dark';
+    (function(){var r=document.documentElement;var t='dark';
     try{var s=localStorage.getItem('prefers-theme');if(s==='light'||s==='dark')t=s}catch(e){}
     r.dataset.theme=t})();
   </script>
-  <link rel="preload" href="assets/fonts/InstrumentSerif-normal-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/Geist-normal-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/fonts.css" />
   <link rel="stylesheet" href="assets/style.css" />
@@ -40,21 +39,19 @@
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="preload" as="image" href="assets/linkedin.svg" />
-  <link rel="preload" as="image" href="assets/instagram.svg" />
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
   <header class="site-header">
     <div class="wrap nav">
-      <a class="brand" href="index.html#top" aria-label="Ivan Kossko — go to start">Ivan Kossko</a>
+      <a class="brand" href="index.html#top" aria-label="Ivan Kossko, home">Ivan Kossko</a>
       <nav aria-label="Primary">
         <a href="index.html#projects">Projects</a>
         <a href="index.html#contact">Contact</a>
       </nav>
       <div class="nav-tools">
         
-        <button class="theme-btn" id="themeToggle" type="button" aria-pressed="true" aria-label="Toggle theme">Theme</button>
+        <button class="theme-btn" id="themeToggle" type="button">Light theme</button>
       </div>
     </div>
   </header>
@@ -62,74 +59,65 @@
   <main id="content">
     <section id="top" class="hero">
       <div class="wrap hero-inner">
-        <p class="mono eyebrow fade-in" style="--d:.05s">Welcome to my website</p>
-        <h1><span class="line"><span style="--d:.15s">Things I design,</span></span><span class="line"><span style="--d:.28s">build and <em>break.</em></span></span></h1>
-        <p class="hero-lead fade-in" style="--d:.65s">Here I add anything creative I have done/made!</p>
-        <div class="hero-foot mono fade-in" style="--d:.85s">
-          <span>Ivan Kossko — Engineer &amp; maker</span>
-          <span>07 projects</span>
-          <a class="btn btn--primary" href="#projects">View projects <span aria-hidden="true">↓</span></a>
-        </div>
+        <p class="eyebrow">Ivan Kossko, engineer and maker</p>
+        <h1>Things I design, build and break.</h1>
+        <p class="hero-lead">Seven projects across electronics, CAD, firmware and control systems. Each page lists what I built and the tools I used.</p>
+        <a class="btn btn--primary" href="#projects">View projects</a>
       </div>
     </section>
 
     <section id="projects">
       <div class="wrap">
-        <div class="section-head reveal"><h2>Projects</h2><span class="mono">(07)</span></div>
+        <div class="section-head"><h2>Projects</h2><span class="meta">7 projects</span></div>
         <div class="featured">
-          <a class="feature feature--a reveal" href="projects/night-vision.html">
-          <div class="feature-media" data-cycle="6"><img src="assets/Night-Vision-goggles.webp" alt="Assembled night vision goggles" class="is-active"><img src="assets/Internals.webp" alt="" loading="lazy"><img src="assets/Camera.webp" alt="" loading="lazy"><img src="assets/switches.webp" alt="" loading="lazy"><img src="assets/ir-floodlights.webp" alt="" loading="lazy"><img src="assets/NV-Wearing.webp" alt="" loading="lazy"></div>
-          <div class="feature-body">
-            <span class="mono">01</span>
-            <span class="feature-title">Night Vision System</span>
-            <ul class="tags" aria-label="Tags"><li class="tag">Systems engineering</li><li class="tag">CAD</li><li class="tag">Electronics</li></ul>
-          </div>
-        </a>
-          <a class="feature feature--b reveal" href="projects/watches.html">
-          <div class="feature-media" data-cycle="5"><img src="assets/watch-1.webp" alt="White chrono with black leather strap" class="is-active"><img src="assets/watch-2.webp" alt="" loading="lazy"><img src="assets/watch-3.webp" alt="" loading="lazy"><img src="assets/watch-4.webp" alt="" loading="lazy"><img src="assets/watch-5.webp" alt="" loading="lazy"></div>
-          <div class="feature-body">
-            <span class="mono">02</span>
-            <span class="feature-title">Custom Watches</span>
-            <ul class="tags" aria-label="Tags"><li class="tag">Mechanical</li><li class="tag">Digital</li><li class="tag">Supply</li></ul>
-          </div>
-        </a>
+          <a class="feature" href="projects/night-vision.html">
+            <div class="feature-media" data-cycle><img src="assets/Night-Vision-goggles.webp" alt="Assembled night vision goggles" width="800" height="600" class="is-active"><img src="assets/Internals.webp" alt="" width="800" height="600" loading="lazy"><img src="assets/Camera.webp" alt="" width="800" height="600" loading="lazy"><img src="assets/switches.webp" alt="" width="800" height="600" loading="lazy"><img src="assets/ir-floodlights.webp" alt="" width="800" height="600" loading="lazy"><img src="assets/NV-Wearing.webp" alt="" width="800" height="600" loading="lazy"></div>
+            <div class="feature-body">
+              <span class="meta">01</span>
+              <span class="feature-title">Night Vision System</span>
+              <span class="meta">Systems engineering / CAD / Electronics</span>
+            </div>
+          </a>
+          <a class="feature" href="projects/watches.html">
+            <div class="feature-media" data-cycle><img src="assets/watch-1.webp" alt="White chrono watch with black leather strap" width="800" height="600" class="is-active"><img src="assets/watch-2.webp" alt="" width="800" height="600" loading="lazy"><img src="assets/watch-3.webp" alt="" width="800" height="600" loading="lazy"><img src="assets/watch-4.webp" alt="" width="800" height="600" loading="lazy"><img src="assets/watch-5.webp" alt="" width="800" height="600" loading="lazy"></div>
+            <div class="feature-body">
+              <span class="meta">02</span>
+              <span class="feature-title">Custom Watches</span>
+              <span class="meta">Mechanical / Digital / Supply</span>
+            </div>
+          </a>
         </div>
-        <p class="mono index-label reveal">More work</p>
+        <h3 class="eyebrow index-label">More projects</h3>
         <ul class="index">
-          <li><a class="row reveal" href="projects/bioreactor.html" data-preview="assets/Assembled-Bioreactor.webp">
+          <li><a class="row" href="projects/bioreactor.html">
             <span class="row-n">03</span>
-            <span class="row-t">Bioreactor</span>
-            <span class="row-tags">Electronics · PCB design · Assembly</span>
-            <span class="row-arrow" aria-hidden="true">↗</span>
             <img class="row-thumb" src="assets/Assembled-Bioreactor.webp" alt="" loading="lazy" width="96" height="72">
+            <span class="row-text"><span class="row-t">Bioreactor</span><span class="meta">Electronics / PCB design / Assembly</span></span>
+            <span class="row-arrow" aria-hidden="true">→</span>
           </a></li>
-          <li><a class="row reveal" href="projects/robot.html" data-preview="assets/6-DoF-Robot-and-Sim.webp">
+          <li><a class="row" href="projects/robot.html">
             <span class="row-n">04</span>
-            <span class="row-t">6 DoF Robot and Simulation</span>
-            <span class="row-tags">MATLAB · Arduino · Inverse kinematics</span>
-            <span class="row-arrow" aria-hidden="true">↗</span>
             <img class="row-thumb" src="assets/6-DoF-Robot-and-Sim.webp" alt="" loading="lazy" width="96" height="72">
+            <span class="row-text"><span class="row-t">6 DoF Robot and Simulation</span><span class="meta">MATLAB / Arduino / Inverse kinematics</span></span>
+            <span class="row-arrow" aria-hidden="true">→</span>
           </a></li>
-          <li><a class="row reveal" href="projects/pedal.html" data-preview="assets/Pedal-CAD.webp">
+          <li><a class="row" href="projects/pedal.html">
             <span class="row-n">05</span>
-            <span class="row-t">Racing Pedal</span>
-            <span class="row-tags">CAD · Product design · SolidWorks</span>
-            <span class="row-arrow" aria-hidden="true">↗</span>
             <img class="row-thumb" src="assets/Pedal-CAD.webp" alt="" loading="lazy" width="96" height="72">
+            <span class="row-text"><span class="row-t">Racing Pedal</span><span class="meta">CAD / Product design / SolidWorks</span></span>
+            <span class="row-arrow" aria-hidden="true">→</span>
           </a></li>
-          <li><a class="row reveal" href="projects/drone.html" data-preview="assets/Drone.webp">
+          <li><a class="row" href="projects/drone.html">
             <span class="row-n">06</span>
-            <span class="row-t">Custom FPV Drone</span>
-            <span class="row-tags">Control systems · Electronics · Tuning</span>
-            <span class="row-arrow" aria-hidden="true">↗</span>
             <img class="row-thumb" src="assets/Drone.webp" alt="" loading="lazy" width="96" height="72">
+            <span class="row-text"><span class="row-t">Custom FPV Drone</span><span class="meta">Control systems / Electronics / Tuning</span></span>
+            <span class="row-arrow" aria-hidden="true">→</span>
           </a></li>
-          <li><a class="row reveal" href="projects/printer-upgrades.html" data-preview="assets/3D-printer.webp">
+          <li><a class="row" href="projects/printer-upgrades.html">
             <span class="row-n">07</span>
-            <span class="row-t">3D Printer Upgrades</span>
-            <span class="row-tags">Firmware · Mechanics · Automation</span>
-            <span class="row-arrow" aria-hidden="true">↗</span>
             <img class="row-thumb" src="assets/3D-printer.webp" alt="" loading="lazy" width="96" height="72">
+            <span class="row-text"><span class="row-t">3D Printer Upgrades</span><span class="meta">Firmware / Mechanics / Automation</span></span>
+            <span class="row-arrow" aria-hidden="true">→</span>
           </a></li>
         </ul>
       </div>
@@ -137,12 +125,11 @@
 
     <section id="contact">
       <div class="wrap">
-        <div class="section-head reveal"><h2>Contact</h2><span class="mono">Elsewhere</span></div>
+        <div class="section-head"><h2>Contact</h2></div>
+        <p class="contact-lead">Message me on LinkedIn or Instagram about a project, a collaboration or a question about how something was built.</p>
         <ul class="contact-list" aria-label="Contact links">
-          <li><a class="contact-link reveal" href="https://www.linkedin.com/in/ivan-kossko-81816a32b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <img src="assets/linkedin.svg" alt="" width="44" height="44"><span>LinkedIn</span><span class="arrow" aria-hidden="true">↗</span></a></li>
-          <li><a class="contact-link reveal" href="https://www.instagram.com/kos_works/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <img src="assets/instagram.svg" alt="" width="44" height="44"><span>Instagram</span><span class="arrow" aria-hidden="true">↗</span></a></li>
+          <li><a class="contact-link" href="https://www.linkedin.com/in/ivan-kossko-81816a32b" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a></li>
+          <li><a class="contact-link" href="https://www.instagram.com/kos_works/" target="_blank" rel="noopener noreferrer"><span>Instagram</span><span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a></li>
         </ul>
       </div>
     </section>

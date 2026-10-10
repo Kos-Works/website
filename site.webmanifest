@@ -1,13 +1,13 @@
 {
-  "name": "Ivan Kossko — Portfolio",
+  "name": "Ivan Kossko | Portfolio",
   "short_name": "Ivan Kossko",
   "description": "Portfolio of Ivan Kossko, engineer and maker.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "lang": "en-GB",
-  "theme_color": "#0a0d12",
-  "background_color": "#0a0d12",
+  "theme_color": "#0e1013",
+  "background_color": "#0e1013",
   "icons": [
     {
       "src": "android-chrome-192x192.png",

@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Year 3 University Project · Bioreactor — Ivan Kossko</title>
+  <title>Bioreactor (Year 3 University Project) | Ivan Kossko</title>
   <meta name="description" content="Year 3 university project: a bioreactor with a custom PCB designed in Altium, populated and troubleshot by hand." />
   <link rel="canonical" href="https://kos-works.github.io/website/projects/bioreactor.html" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; object-src 'self'; base-uri 'self'; form-action 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="color-scheme" content="dark light" />
-  <meta name="theme-color" content="#0a0d12">
-  <meta name="msapplication-TileColor" content="#0a0d12">
+  <meta name="theme-color" content="#0e1013">
+  <meta name="msapplication-TileColor" content="#0e1013">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Ivan Kossko">
   <meta property="og:locale" content="en_GB">
-  <meta property="og:title" content="Year 3 University Project · Bioreactor — Ivan Kossko">
+  <meta property="og:title" content="Bioreactor (Year 3 University Project) | Ivan Kossko">
   <meta property="og:description" content="Year 3 university project: a bioreactor with a custom PCB designed in Altium, populated and troubleshot by hand.">
   <meta property="og:url" content="https://kos-works.github.io/website/projects/bioreactor.html">
   <meta property="og:image" content="https://kos-works.github.io/website/assets/social.jpg">
@@ -22,16 +22,15 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Ivan Kossko: things I design, build and break. Engineer and maker portfolio.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Year 3 University Project · Bioreactor — Ivan Kossko">
+  <meta name="twitter:title" content="Bioreactor (Year 3 University Project) | Ivan Kossko">
   <meta name="twitter:description" content="Year 3 university project: a bioreactor with a custom PCB designed in Altium, populated and troubleshot by hand.">
   <meta name="twitter:image" content="https://kos-works.github.io/website/assets/social.jpg">
   <meta name="twitter:image:alt" content="Ivan Kossko: things I design, build and break. Engineer and maker portfolio.">
   <script>
-    (function(){var r=document.documentElement;r.classList.add('js');var t='dark';
+    (function(){var r=document.documentElement;var t='dark';
     try{var s=localStorage.getItem('prefers-theme');if(s==='light'||s==='dark')t=s}catch(e){}
     r.dataset.theme=t})();
   </script>
-  <link rel="preload" href="../assets/fonts/InstrumentSerif-normal-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../assets/fonts/Geist-normal-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../assets/fonts.css" />
   <link rel="stylesheet" href="../assets/style.css" />
@@ -46,14 +45,13 @@
   <a class="skip" href="#content">Skip to content</a>
   <header class="site-header">
     <div class="wrap nav">
-      <a class="brand" href="../index.html#top" aria-label="Ivan Kossko — go to start">Ivan Kossko</a>
+      <a class="brand" href="../index.html#top" aria-label="Ivan Kossko, home">Ivan Kossko</a>
       <nav aria-label="Primary">
         <a href="../index.html#projects">Projects</a>
         <a href="../index.html#contact">Contact</a>
       </nav>
       <div class="nav-tools">
-        <a class="back-btn" href="../index.html#projects" aria-label="Back to project list">← <span>Back</span></a>
-        <button class="theme-btn" id="themeToggle" type="button" aria-pressed="true" aria-label="Toggle theme">Theme</button>
+        <button class="theme-btn" id="themeToggle" type="button">Light theme</button>
       </div>
     </div>
   </header>
@@ -61,17 +59,18 @@
   <main id="content">
     <section class="p-hero">
       <div class="wrap">
-        <p class="mono crumb fade-in" style="--d:.1s"><a href="../index.html#projects">Projects</a><span aria-hidden="true">/</span><span>03</span></p>
-        <h1 class="p-title"><span class="p-kicker">Year 3 University Project</span><span class="line"><span style="--d:.15s">Bioreactor</span></span></h1>
-        <div class="p-meta fade-in" style="--d:.6s">
-          <span class="mono count">03 / 07</span>
-          <ul class="tags" aria-label="Tags"><li class="tag">Electronics</li><li class="tag">PCB design</li><li class="tag">Assembly</li><li class="tag">PCB</li><li class="tag">Altium</li><li class="tag">SMT</li></ul>
+        <nav class="meta crumb" aria-label="Breadcrumb"><a href="../index.html#projects">Projects</a><span aria-hidden="true">/</span><span aria-current="page">Bioreactor</span></nav>
+        <p class="eyebrow">Year 3 University Project</p>
+        <h1 class="p-title">Bioreactor</h1>
+        <div class="p-meta">
+          <span class="meta">Project 03 of 07</span>
+          <ul class="tags" aria-label="Tools and topics"><li>Electronics</li><li>PCB design</li><li>Assembly</li><li>PCB</li><li>Altium</li><li>SMT</li></ul>
         </div>
       </div>
     </section>
 
     <section class="p-media">
-      <div class="wrap reveal">
+      <div class="wrap">
         <div class="carousel" id="bioCarousel">
           <figure>
             <img decoding="async" id="bioSlide" src="../assets/Assembled-Bioreactor.webp" alt="Assembled bioreactor with custom PCB" />
@@ -88,8 +87,8 @@
 
     <section>
       <div class="wrap p-body">
-        <h2 class="reveal">What I did</h2>
-        <ol class="steps reveal">
+        <h2>What I did</h2>
+        <ol class="steps">
           <li>Built a custom PCB using Altium, including all schematic drawings and electronic component placement.</li>
           <li>Completed through hole and surface mount soldering for smaller components.</li>
           <li>Performed PCB troubleshooting.</li>
@@ -102,8 +101,8 @@
     </section>
 
     <nav class="pager" aria-label="More projects">
-      <a href="watches.html" rel="prev"><span class="mono">← Previous</span><strong>Custom Watches</strong></a>
-      <a href="robot.html" rel="next"><span class="mono">Next →</span><strong>Final Year University Project · 6 DoF Robot and Simulation</strong></a>
+      <a href="watches.html" rel="prev"><span class="meta">Previous project</span><strong>Custom Watches</strong></a>
+      <a href="robot.html" rel="next"><span class="meta">Next project</span><strong>Final Year University Project · 6 DoF Robot and Simulation</strong></a>
     </nav>
   </main>
 
