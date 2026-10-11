@@ -17,6 +17,34 @@
     });
   }
 
+
+  // Mobile navigation: a disclosure button that is only shown (and the menu only collapsed) when JS runs
+  const menuBtn = document.getElementById('menuToggle');
+  const siteNav = document.getElementById('siteNav');
+  const header = document.querySelector('.site-header');
+  if (menuBtn && siteNav && header) {
+    const mq = matchMedia('(max-width: 640px)');
+    const setOpen = (open, returnFocus) => {
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      menuBtn.textContent = open ? 'Close' : 'Menu';
+      header.classList.toggle('nav-open', open);
+      if (!open && returnFocus) menuBtn.focus();
+    };
+    const sync = () => {
+      menuBtn.hidden = !mq.matches;
+      header.classList.toggle('js-nav', mq.matches);
+      setOpen(false);
+    };
+    sync();
+    mq.addEventListener('change', sync);
+    menuBtn.addEventListener('click', () => setOpen(menuBtn.getAttribute('aria-expanded') !== 'true'));
+    siteNav.addEventListener('click', (e) => { if (e.target.closest('a') && mq.matches) setOpen(false); });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && header.classList.contains('nav-open')) setOpen(false, true);
+    });
+  }
+
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 

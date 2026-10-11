@@ -45,12 +45,12 @@
   <header class="site-header">
     <div class="wrap nav">
       <a class="brand" href="index.html#top" aria-label="Ivan Kossko, home">Ivan Kossko</a>
-      <nav aria-label="Primary">
+      <nav id="siteNav" aria-label="Primary">
         <a href="index.html#projects">Projects</a>
         <a href="index.html#contact">Contact</a>
       </nav>
       <div class="nav-tools">
-        
+        <button class="menu-btn" id="menuToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu" hidden>Menu</button>
         <button class="theme-btn" id="themeToggle" type="button">Light theme</button>
       </div>
     </div>
@@ -126,8 +126,9 @@
     <section id="contact">
       <div class="wrap">
         <div class="section-head"><h2>Contact</h2></div>
-        <p class="contact-lead">Message me on LinkedIn or Instagram about a project, a collaboration or a question about how something was built.</p>
+        <p class="contact-lead">Email me, or message me on LinkedIn or Instagram, about a project, a collaboration or a question about how something was built.</p>
         <ul class="contact-list" aria-label="Contact links">
+          <li><a class="contact-link" href="mailto:kosworksbusiness@gmail.com?subject=Portfolio%20enquiry"><span>kosworksbusiness@gmail.com</span><span aria-hidden="true">→</span><span class="visually-hidden">(opens your email app)</span></a></li>
           <li><a class="contact-link" href="https://www.linkedin.com/in/ivan-kossko-81816a32b" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a></li>
           <li><a class="contact-link" href="https://www.instagram.com/kos_works/" target="_blank" rel="noopener noreferrer"><span>Instagram</span><span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a></li>
         </ul>

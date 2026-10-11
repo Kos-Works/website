@@ -102,6 +102,9 @@ h2{font-size:var(--fs-h2); font-weight:var(--fw-semibold); line-height:var(--lh-
 .nav nav a{font-size:var(--fs-small); font-weight:var(--fw-medium); color:var(--muted); text-decoration:none;
   min-height:var(--control); display:inline-flex; align-items:center; transition:color var(--t-fast) var(--ease)}
 .nav nav a:hover{color:var(--text)}
+.menu-btn{display:inline-flex; align-items:center; justify-content:center; min-height:var(--control); padding:0 var(--s-3); font:var(--fw-medium) var(--fs-small)/1 var(--font); color:var(--text); background:transparent; border:1px solid var(--border-strong); border-radius:var(--r-2); cursor:pointer}
+.menu-btn[hidden]{display:none}
+.menu-btn:hover{background:var(--surface-2); border-color:var(--text)}
 .nav-tools{display:flex; gap:var(--s-2); align-items:center}
 
 section{padding-block:var(--section)}
@@ -243,8 +246,14 @@ section{padding-block:var(--section)}
 @media (max-width:640px){
   :root{--gutter:var(--s-4); --section:var(--s-7)}
   .nav{gap:var(--s-3)}
+  .contact-link{font-size:var(--fs-lead); overflow-wrap:anywhere}
+  .nav{flex-wrap:wrap}
+  .nav-tools{margin-left:auto}
   .nav nav{gap:var(--s-1)}
   .nav nav a{padding-inline:var(--s-2)}
+  .js-nav .nav nav{display:none; order:3; flex-direction:column; width:100%; margin:0 0 var(--s-3); gap:0; border-top:1px solid var(--border)}
+  .js-nav.nav-open .nav nav{display:flex}
+  .js-nav .nav nav a{padding:0 var(--s-1); border-bottom:1px solid var(--border); font-size:var(--fs-body)}
   .theme-btn{padding-inline:var(--s-3)}
   .featured{grid-template-columns:1fr; gap:var(--s-5)}
   .row{grid-template-columns:80px 1fr auto; margin-inline:0; padding-inline:0}
@@ -261,4 +270,4 @@ section{padding-block:var(--section)}
   html{scroll-behavior:auto}
   *,*::before,*::after{transition-duration:.01ms!important; animation-duration:.01ms!important}
 }
-@media print{ .site-header,.theme-btn{display:none} body{background:#fff; color:#000} }
+@media print{ .site-header,.theme-btn,.menu-btn{display:none} body{background:#fff; color:#000} }
